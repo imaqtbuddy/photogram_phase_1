@@ -15,7 +15,10 @@ def destroy
  @photo_to_delete=Photo.find(@photoid)
  @photo_to_delete.destroy
  redirect_to '/'
+end
 
+def new_form
+render("new_form.html.erb")
 end
 
 end
