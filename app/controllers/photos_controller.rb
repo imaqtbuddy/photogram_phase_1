@@ -10,5 +10,16 @@ def show
   render("show.html.erb")
 end
 
+def destroy
+ @photoid=params["id"]
+ @photo_to_delete=Photo.find(@photoid)
+ @photo_to_delete.destroy
+ redirect_to '/'
+
+end
+
+
+
+
 end
 
